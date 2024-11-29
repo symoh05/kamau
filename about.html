@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter Kamau | About</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Peter Kamau</div>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </header>
+
+  <!-- Side Menu -->
+  <div class="side-menu">
+    <span class="close-btn">&times;</span>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- About Section -->
+  <section class="about">
+    <h1>About Me</h1>
+    <p>
+      I am Peter Kamau, a professional generator technician and engineer based in Nairobi, Kenya. I have extensive experience in mechanical and automotive engineering, specializing in repairing and maintaining generators.
+    </p>
+    <p>
+      With years of hands-on experience, I have successfully contributed to numerous projects that require a high level of technical expertise and problem-solving. I am passionate about working with engines and mechanical systems to create lasting solutions.
+    </p>
+    <a href="contact.html" class="btn">Contact Me</a>
+  </section>
+
+  <footer>
+    <ul class="social-icons">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+    <p>© 2024 Peter Kamau. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle Side Menu
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const sideMenu = document.querySelector('.side-menu');
+      const closeBtn = document.querySelector('.side-menu .close-btn');
+
+      hamburger.addEventListener('click', () => {
+        sideMenu.classList.add('active');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        sideMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

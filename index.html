@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter Kamau | Portfolio</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #121212;
+      color: #fff;
+      line-height: 1.6;
+      transition: margin-left 0.3s ease;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #00d9ff;
+      font-weight: bold;
+    }
+
+    /* Hamburger Menu (Always visible on all screens) */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger .line {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 3px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* Side Menu (Hidden by default) */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px; /* Initially off-screen */
+      width: 250px;
+      height: 100%;
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu.active {
+      right: 0; /* Show the menu */
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .side-menu ul li {
+      padding: 15px 0;
+    }
+
+    .side-menu ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .side-menu ul li a:hover {
+      color: #00d9ff;
+    }
+
+    .side-menu .close-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 30px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      min-height: 90vh;
+      background: linear-gradient(120deg, #0f0f1c, #004aad);
+    }
+
+    .hero .content {
+      flex: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero h1 span {
+      color: #00d9ff;
+    }
+
+    .hero .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero .hero-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background: #00d9ff;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #0077b6;
+      transform: scale(1.05);
+    }
+
+    .btn-alt {
+      background: #004aad;
+    }
+
+    .btn-alt:hover {
+      background: #011a26;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons .btn {
+      margin: 5px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+    }
+
+    footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    footer .social-icons a {
+      color: #fff;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      color: #00d9ff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Peter Kamau</div>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </header>
+
+  <!-- Side Menu -->
+  <div class="side-menu">
+    <span class="close-btn">&times;</span>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="content">
+      <h1>Hi, I'm <span>Peter Kamau</span></h1>
+      <h2>Generator Technician</h2>
+      <p>
+        I am a professional generator technician and engineer based in Nairobi, Kenya. I specialize in fixing and repairing generators.
+      </p>
+      <div class="buttons">
+        <a href="hireme.html" class="btn">Hire Me</a>
+        <a href="contact.html" class="btn btn-alt">Let's Talk More</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="img/gen1.png" alt="Peter Kamau">
+    </div>
+  </section>
+
+  <footer>
+    <ul class="social-icons">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+    <p>© 2024 Peter Kamau. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle Side Menu
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const sideMenu = document.querySelector('.side-menu');
+      const closeBtn = document.querySelector('.side-menu .close-btn');
+
+      hamburger.addEventListener('click', () => {
+        sideMenu.classList.add('active');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        sideMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

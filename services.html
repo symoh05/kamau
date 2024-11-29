@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Peter Kamau</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Peter Kamau</div>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </header>
+
+  <!-- Side Menu -->
+  <div class="side-menu">
+    <span class="close-btn">&times;</span>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h1>My Services</h1>
+    <div class="service-list">
+      <div class="service-item">
+        <h2>Mechanical Engineering</h2>
+        <p>Providing mechanical engineering services such as machinery installation, maintenance, and repair.</p>
+      </div>
+      <div class="service-item">
+        <h2>Automotive Engineering</h2>
+        <p>Specializing in vehicle diagnostics, repairs, and performance enhancements.</p>
+      </div>
+      <div class="service-item">
+        <h2>Generator Technician</h2>
+        <p>Expert in installing, repairing, and maintaining generators for both commercial and residential use.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <ul class="social-icons">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+    <p>© 2024 Peter Kamau. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle Side Menu
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const sideMenu = document.querySelector('.side-menu');
+      const closeBtn = document.querySelector('.side-menu .close-btn');
+
+      hamburger.addEventListener('click', () => {
+        sideMenu.classList.add('active');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        sideMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
