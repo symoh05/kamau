@@ -84,13 +84,21 @@ header {
 }
 
 .side-menu .close-btn {
-  position: absolute;
+  position: bottom;
   top: 10px;
   left: 10px;
   font-size: 30px;
   cursor: pointer;
   color: red;
+  height: 10px;
 }
+
+.side-menu .close-btn:hover {
+  color: #004aad;
+  background-color: red;
+}
+
+
 
 /* Hero Section */
 .hero {
